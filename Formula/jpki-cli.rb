@@ -5,18 +5,27 @@ class JpkiCli < Formula
   license "LGPL-2.1"
 
   on_macos do
-    url "https://github.com/siketyan/jpki-rs/releases/download/0.1.8/jpki-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "60d7ce4f44789b1f3733e9a0e8d9d0b4cbf83564f09e9ff01ecae7ec89b2071d"
+    if Hardware::CPU.intel?
+      url "https://github.com/siketyan/jpki-rs/releases/download/0.1.8/jpki-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "e84fe854624afe2ec10eb9620c2d0f8a57f9d048d7f4d9d3ad31c14e5e750e26"
 
-    def install
-      bin.install "jpki-cli"
+      def install
+        bin.install "jpki-cli"
+      end
+    else
+      url "https://github.com/siketyan/jpki-rs/releases/download/0.1.8/jpki-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "bea9c51b3ebade43d76ae1c39a30f7e2c703f97330d1c7432c6ed53a58317377"
+
+      def install
+        bin.install "jpki-cli"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/siketyan/jpki-rs/releases/download/0.1.8/jpki-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9d969822546cffc18df3e55ef16a82dfa72b48025b93e6f1adf219326621d434"
+      sha256 "2b11ceebb5b19070b02f850b5665299de33fa20f8e145a597cd0d1e5e79b050d"
 
       def install
         bin.install "jpki-cli"
