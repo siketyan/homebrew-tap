@@ -1,5 +1,5 @@
 class JpkiCli < Formula
-  desc "Read certificates, sign and verify documents using your JPKI card."
+  desc "Read certificates, sign and verify documents using your JPKI card"
   homepage "https://github.com/siketyan/jpki-rs"
   version "0.1.8"
   license "LGPL-2.1"
@@ -8,17 +8,13 @@ class JpkiCli < Formula
     if Hardware::CPU.intel?
       url "https://github.com/siketyan/jpki-rs/releases/download/0.1.8/jpki-cli-x86_64-apple-darwin.tar.gz"
       sha256 "e84fe854624afe2ec10eb9620c2d0f8a57f9d048d7f4d9d3ad31c14e5e750e26"
-
-      def install
-        bin.install "jpki-cli"
-      end
     else
       url "https://github.com/siketyan/jpki-rs/releases/download/0.1.8/jpki-cli-aarch64-apple-darwin.tar.gz"
       sha256 "bea9c51b3ebade43d76ae1c39a30f7e2c703f97330d1c7432c6ed53a58317377"
+    end
 
-      def install
-        bin.install "jpki-cli"
-      end
+    def install
+      bin.install "jpki-cli"
     end
   end
 
@@ -34,6 +30,6 @@ class JpkiCli < Formula
   end
 
   test do
-    system "#{bin}/jpki-cli -V"
+    system "#{bin}/jpki-cli", "-V"
   end
 end
