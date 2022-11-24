@@ -16,7 +16,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Install dependencies
-        if: ${{ matrix.os == 'ubuntu-latest' }}
+        if: ${{ matrix.os == 'ubuntu-22.04' }}
         run: sudo apt update && sudo apt install libpcsclite1
 
       - name: Cache Homebrew Bundler RubyGems
@@ -38,7 +38,7 @@ jobs:
       - run: brew test-bot --only-tap-syntax
 
       - run: brew test-bot --only-formulae
-        if: github.event_name == 'pull_request'
+        if: ${{ github.event_name == 'pull_request' && matrix.os == 'macos-12' }}
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
