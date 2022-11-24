@@ -6,11 +6,11 @@ class Ghr < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://api.github.com/repos/siketyan/ghr/releases/assets/85795570"
-      sha256 "0aa2c77587ea4866ddb4f22b701ef03c10fe75446dd2df02e30a209bd5872646"
+      url "https://github.com/siketyan/ghr/releases/download/v0.2.1/ghr-x86_64-apple-darwin.tar.gz"
+      sha256 "da859efd04d93d02a904d122cd3cd2093f69f0faaa10db2bfc4099ab55f08b57"
     else
-      url "https://api.github.com/repos/siketyan/ghr/releases/assets/85795544"
-      sha256 "50651da040dae5846b0d784296c5d6b3b803a6ec0cca35e3ca0c05b9e851fce1"
+      url "https://github.com/siketyan/ghr/releases/download/v0.2.1/ghr-aarch64-apple-darwin.tar.gz"
+      sha256 "645ab2d3fcc276aedd079bc44689639b67f68625b78d32d28f709b9169dca319"
     end
 
     def install
@@ -20,11 +20,11 @@ class Ghr < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://api.github.com/repos/siketyan/ghr/releases/assets/85795504"
-      sha256 "7106f9b102ba2a6d433157bee235c3666d0647950920daafdbc5cbb70f44dca0"
+      url "https://github.com/siketyan/ghr/releases/download/v0.2.1/ghr-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a2b9d3449b655f044f12067036aee8a051a3ce94004f7e5a4b15a56b15900cf2"
     else
-      url "https://api.github.com/repos/siketyan/ghr/releases/assets/85795545"
-      sha256 "52b9cd5136108358defc1aba531c5ec865dca2db391882cbc275f6af917dd6c6"
+      url "https://github.com/siketyan/ghr/releases/download/v0.2.1/ghr-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9b0d56e5a88bec642b88a4a99ee0cd406f8f9f1d81889250cb70b5d46ffe976e"
     end
 
     def install
