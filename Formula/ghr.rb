@@ -1,16 +1,16 @@
 class Ghr < Formula
   desc "Yet another repository management with auto-attaching profiles"
   homepage "https://github.com/siketyan/ghr"
-  version "0.3.9"
+  version "0.3.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/siketyan/ghr/releases/download/v0.3.9/ghr-x86_64-apple-darwin.tar.gz"
-      sha256 "c3b14d1e88cea318a7bd2dcbd0baef7507a18568af9a1a1dce708abdfbce6006"
+      url "https://github.com/siketyan/ghr/releases/download/v0.3.10/ghr-x86_64-apple-darwin.tar.gz"
+      sha256 "c85e127094a10313ebf3743dd064d0fb82605619980dfc1acf913e56597b4778"
     else
-      url "https://github.com/siketyan/ghr/releases/download/v0.3.9/ghr-aarch64-apple-darwin.tar.gz"
-      sha256 "e9d9e6aca124ff415ddb81897d0de7cb65dba23005f910cdbbd029e0e104a948"
+      url "https://github.com/siketyan/ghr/releases/download/v0.3.10/ghr-aarch64-apple-darwin.tar.gz"
+      sha256 "b5aa9c2e906f3d861d4bd81b54854ebc3ceab76cc50ac141d15ccbfcd753257a"
     end
 
     def install
@@ -20,11 +20,11 @@ class Ghr < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/siketyan/ghr/releases/download/v0.3.9/ghr-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8964ac6fe4c3c0e4aa451a1aa62ac3cb86116f43e0bc16234261f6b001ec7844"
+      url "https://github.com/siketyan/ghr/releases/download/v0.3.10/ghr-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bab6da8424a8d6efc76e7436fad3d2a286a9fb84b75c4b581d0111ebfb4d9478"
     else
-      url "https://github.com/siketyan/ghr/releases/download/v0.3.9/ghr-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "bf35f2a22f821203838f852f0c7f0732815911638b9ef0555acd4f1a27640383"
+      url "https://github.com/siketyan/ghr/releases/download/v0.3.10/ghr-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "38d9997918ad5aea62110ef06626f82701de9843df2ba8894ef94a948953fe58"
     end
 
     def install
