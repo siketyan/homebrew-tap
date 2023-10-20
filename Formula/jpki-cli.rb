@@ -1,7 +1,6 @@
 class JpkiCli < Formula
   desc "Read certificates, sign and verify documents using your JPKI card"
   homepage "https://github.com/siketyan/jpki-rs"
-  version "0.3.0"
   license "LGPL-2.1"
 
   on_macos do
