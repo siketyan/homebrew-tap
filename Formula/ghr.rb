@@ -6,9 +6,6 @@ class Ghr < Formula
   version "0.3.11"
   license "MIT"
 
-  bottle do
-  end
-
   depends_on "rust" => :build
 
   def install
